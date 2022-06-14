@@ -3,6 +3,8 @@
 <p align="center"> Twitter API.</p>
 
 
+![StyleCI build status](https://github.styleci.io/repos/503515961/shield) 
+
 ## Installing
 
 ```shell
@@ -11,7 +13,26 @@ $ composer require jerrkill/twapi -vvv
 
 ## Usage
 
-TODO
+.env
+
+```shell
+TWITTER_CONSUMER_KEY=
+TWITTER_CONSUMER_SECRET=
+TWITTER_ACCESS_TOKEN=
+TWITTER_ACCESS_TOKEN_SECRET=
+TWITTER_BEARERTOKEN=
+```
+
+
+```php
+$twitter = new Twapi(config('twapi.CONSUMER_KEY'), config('twapi.CONSUMER_SECRET'), config('twapi.BEARERTOKEN'));
+$params = [
+    'tweet.fields' => 'id,text,author_id,attachments,created_at,public_metrics,referenced_tweets',
+    'expansions' => 'author_id',
+    'user.fields' => 'id,name,username,description,created_at'
+];
+$response = $twitter->request('GET', "/2/lists/{$listId}/tweets", $params);
+```
 
 ## Contributing
 
