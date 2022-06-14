@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the jerrkill/twgetter.
+ * This file is part of the jerrkill/twapi.
  *
  * (c) jerrkill <jerrkill123@gmail.com>
  *
