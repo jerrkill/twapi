@@ -1,0 +1,27 @@
+{
+    "name": "jerrkill\/twapi",
+    "description": "Twitter API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jerrkill",
+            "email": "jerrkill123@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Jerrkill\\Twapi\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jerrkill\\Twapi\\TwapiServiceProvider"
+            ],
+            "aliases": {
+                "Twapi": "Jerrkill\\Twapi\\Facades\\Twapi"
+            }
+        }
+    }
+}
